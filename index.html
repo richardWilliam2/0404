@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
+<!-- Chamando o jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<!-- Exemplo de CDN -->
+<!-- SEU CÓDIGO VEM DEPOIS -->
+ <link rel="stylesheet" href="style.css">
+<script>
+    $(document).ready(function () {
+        $("#cep").mask("99999-999"); // Ou "99999-999"
+    });
+</script>
+
+<head>
+    <!-- Contém metadados e links para recursos externos -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para design responsivo (largura do dispositivo, escala inicial 1) -->
+    <title>Gerenciador de Pessoas (localStorage) - Sem Tabela</title>
+    <!-- Define o título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="css/crud.css">
+    <!-- Linka o arquivo CSS externo para estilização -->
+</head>
+
+<body>
+    <!-- Contém o conteúdo visível da página -->
+
+    <h1>Gerenciador de Pessoas (localStorage)</h1>
+    <!-- Título principal da página -->
+    <p style="text-align: center;">Use o formulário abaixo para adicionar ou editar dados. Use os botões de prompt para
+        carregar/excluir por ID.</p>
+    <!-- Pequena instrução para o usuário -->
+
+    <div class="container">
+        <!-- Container principal para agrupar o conteúdo e aplicar estilos -->
+        <form id="meuFormulario">
+            <!-- Formulário para adicionar ou editar dados de pessoas -->
+            <h2>Adicionar / Editar Pessoa</h2>
+            <!-- Título da seção do formulário -->
+
+            <div class="form-group">
+                <!-- Agrupa label e input para o ID -->
+                <label for="id">ID:</label>
+                <!-- Rótulo do campo ID -->
+                <input type="text" id="id" required placeholder="Ex: 1 ou CPF (único)">
+                <!-- Campo de texto para o ID (obrigatório) -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para o Nome -->
+                <label for="nome">Nome Completo:</label>
+                <!-- Rótulo do campo Nome -->
+                <input type="text" id="nome" required placeholder="Ex: João da Silva">
+                <!-- Campo de texto para o Nome (obrigatório) -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para a Data de Nascimento -->
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <!-- Rótulo do campo Data de Nascimento -->
+                <input type="date" id="dataNascimento" required>
+                <!-- Campo de data para Data de Nascimento (obrigatório) -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para a Idade (apenas leitura) -->
+                <label for="idadeInput">Idade:</label>
+                <!-- Rótulo do campo Idade -->
+                <input type="text" id="idadeInput" readonly placeholder="(calculada automaticamente)">
+                <!-- Campo de texto apenas para leitura para exibir a idade calculada -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para o Endereço -->
+                <label for="endereco">Endereço:</label>
+                <!-- Rótulo do campo Endereço -->
+                <input type="text" id="endereco" placeholder="Ex: Rua das Flores, 123">
+                <!-- Campo de texto para o Endereço -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para o CEP -->
+                <label for="cep">CEP:</label>
+                <!-- Rótulo do campo CEP -->
+                <input type="text" id="cep" placeholder="Ex: 12345-678" pattern="\d{5}-?\d{3}">
+                <!-- Campo de texto para o CEP (com um padrão simples) -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para o Bairro -->
+                <label for="bairro">Bairro:</label>
+                <!-- Rótulo do campo Bairro -->
+                <input type="text" id="bairro" placeholder="Ex: Centro">
+                <!-- Campo de texto para o Bairro -->
+            </div>
+
+            <div class="form-group">
+                <!-- Agrupa label e input para a UF -->
+                <label for="uf">UF:</label>
+                <!-- Rótulo do campo UF -->
+                <input type="text" id="uf" maxlength="2" placeholder="Ex: SP">
+                <!-- Campo de texto para a UF (máximo 2 caracteres) -->
+            </div>
+
+            <div class="form-actions">
+                <!-- Container para os botões de ação do formulário -->
+                <button type="submit" id="save-button">Salvar Pessoa</button>
+                <!-- Botão para submeter o formulário (Adicionar/Atualizar) -->
+                <button type="button" id="limpar-button">Limpar Formulário</button>
+                <!-- Botão para limpar os campos do formulário -->
+                <button type="button" id="editar-prompt-button">Carregar para Editar (Prompt)</button>
+                <!-- Botão para iniciar a edição via prompt de ID -->
+                <button type="button" id="excluir-prompt-button">Excluir por ID (Prompt)</button>
+                <!-- Botão para iniciar a exclusão via prompt de ID -->
+            </div>
+        </form>
+        <!-- Fim do formulário -->
+
+        <!-- A SEÇÃO DA LISTA/TABELA FOI REMOVIDA DAQUI -->
+
+    </div>
+    <!-- Fim do container principal -->
+
+    <script src="js/crud.js"></script>
+    <!-- Linka o arquivo JavaScript externo no final do body -->
+</body>
+
+</html>

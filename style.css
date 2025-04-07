@@ -1,0 +1,109 @@
+/* --- Estilos Globais --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes principal */
+    line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 20px; /* Adiciona espaçamento interno ao redor do conteúdo */
+    background-color: #f4f7f6; /* Define uma cor de fundo suave */
+    color: #333; /* Define a cor padrão do texto */
+}
+
+/* --- Títulos --- */
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+    color: #2c3e50; /* Define uma cor escura para os títulos */
+    margin-bottom: 20px; /* Adiciona espaço abaixo dos títulos */
+}
+
+/* --- Container Principal --- */
+.container {
+    max-width: 700px; /* Largura máxima ajustada, já que não tem tabela */
+    margin: 20px auto; /* Centraliza o container na página */
+    background-color: #fff; /* Define um fundo branco para o container */
+    padding: 30px; /* Adiciona espaçamento interno no container */
+    border-radius: 8px; /* Arredonda as bordas do container */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* --- Formulário --- */
+#meuFormulario { /* Estiliza o formulário pelo ID */
+    margin-bottom: 0; /* Remove margem inferior, já que não há nada abaixo */
+}
+
+.form-group { /* Estiliza cada grupo de label/input */
+    margin-bottom: 15px; /* Adiciona espaço abaixo de cada grupo */
+}
+
+.form-group label { /* Estiliza os rótulos (labels) */
+    display: block; /* Faz o label ocupar a linha inteira */
+    margin-bottom: 5px; /* Adiciona espaço abaixo do label */
+    font-weight: bold; /* Deixa o texto do label em negrito */
+    color: #555; /* Define a cor do texto do label */
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea { /* Estiliza campos de texto, data e textarea */
+    width: 100%; /* Faz o campo ocupar 100% da largura do container pai */
+    padding: 10px; /* Adiciona espaçamento interno no campo */
+    border: 1px solid #ccc; /* Define uma borda cinza clara */
+    border-radius: 4px; /* Arredonda as bordas do campo */
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+    font-size: 1rem; /* Define o tamanho da fonte dentro do campo */
+}
+.form-group input[readonly] { /* Estiliza campos apenas leitura */
+    background-color: #eee; /* Fundo cinza para indicar não editável */
+    cursor: not-allowed; /* Cursor indicando que não pode interagir */
+}
+
+.form-group textarea { /* Estilos específicos para textarea */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* --- Botões do Formulário --- */
+/* --- Botões do Formulário --- */
+.form-actions { /* Container dos botões de ação do formulário */
+    margin-top: 20px; /* Adiciona espaço acima dos botões */
+    display: flex;     /* Usa flexbox para alinhar os botões */
+    flex-wrap: nowrap; /* ALTERADO: Garante que os botões NÃO quebrem linha */
+    gap: 10px;         /* Adiciona espaço entre os botões */
+    /* Você pode adicionar 'overflow-x: auto;' se quiser uma barra de rolagem */
+    /* caso os botões não caibam na largura da tela/container */
+    /* overflow-x: auto; */
+}
+
+/* Estilo base comum para todos os botões (permanece igual) */
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    color: white;
+    background-color: #555;
+     /* Adiciona flex-shrink: 0 se você NÃO quiser que os botões encolham */
+    /* flex-shrink: 0; */
+}
+
+/* Efeito hover para todos os botões (permanece igual) */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Cores específicas para botões do formulário (permanecem iguais) */
+#save-button { background-color: #3498db; } /* Azul */
+#save-button:hover { background-color: #2980b9; }
+
+#limpar-button { background-color: #f39c12; } /* Laranja */
+#limpar-button:hover { background-color: #e67e22; }
+
+#editar-prompt-button { background-color: #9b59b6; } /* Roxo */
+#editar-prompt-button:hover { background-color: #8e44ad; }
+
+#excluir-prompt-button { background-color: #e74c3c; } /* Vermelho */
+#excluir-prompt-button:hover { background-color: #c0392b; }
+
+/* --- ESTILOS DA TABELA FORAM REMOVIDOS --- */
+/* Ex.: .dados-tabela, th, td, etc. não são mais necessários */
